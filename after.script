@@ -1,0 +1,7 @@
+﻿public static List<Person> After(List<Person> models)
+{
+      var list=models.Where(t=>t.Name.Contains("3")).ToList();
+      Person p=list.Where(t=>t.Name=="B 3").FirstOrDefault();
+      p.Name="zzzzzzzzz";
+      return list;
+}
